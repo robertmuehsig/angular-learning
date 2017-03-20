@@ -8,11 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { AuthService } from './auth.service';
+import { AuthredirectComponent } from './authredirect/authredirect.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    AuthredirectComponent
   ],
   imports: [
     BrowserModule,
