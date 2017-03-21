@@ -104,64 +104,7 @@ processSigninResponse() {
       console.log(err);
     });
   };
-  /**
-   * Example of how you can make auth request using angulars http methods.
-   * @param options if options are not supplied the default content type is application/json
-   */
-  AuthGet(url: string, options?: RequestOptions): Observable<Response> {
-
-    if (options) {
-      options = this._setRequestOptions(options);
-    }
-    else {
-      options = this._setRequestOptions();
-    }
-    return this.http.get(url, options);
-  }
-  /**
-   * @param options if options are not supplied the default content type is application/json
-   */
-  AuthPut(url: string, data: any, options?: RequestOptions): Observable<Response> {
-
-    let body = JSON.stringify(data);
-
-    if (options) {
-      options = this._setRequestOptions(options);
-    }
-    else {
-      options = this._setRequestOptions();
-    }
-    return this.http.put(url, body, options);
-  }
-  /**
-   * @param options if options are not supplied the default content type is application/json
-   */
-  AuthDelete(url: string, options?: RequestOptions): Observable<Response> {
-
-    if (options) {
-      options = this._setRequestOptions(options);
-    }
-    else {
-      options = this._setRequestOptions();
-    }
-    return this.http.delete(url, options);
-  }
-  /**
-   * @param options if options are not supplied the default content type is application/json
-   */
-  AuthPost(url: string, data: any, options?: RequestOptions): Observable<Response> {
-
-    let body = JSON.stringify(data);
-
-    if (options) {
-      options = this._setRequestOptions(options);
-    }
-    else {
-      options = this._setRequestOptions();
-    }
-    return this.http.post(url, body, options);
-  }
-
+ 
 
   private _setAuthHeaders(user: any) {
     this.authHeaders = new Headers();
